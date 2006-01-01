@@ -33,6 +33,7 @@ do tcpdumpa.
 
 %build
 %{__make} %{name} \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}" \
 	CPPFLAGS=-I/usr/include/ncurses
 

@@ -1,12 +1,12 @@
 Summary:	Real-time packet viewer
 Summary(pl):	Przegl±darka pakietów trybu rzeczywistego
 Name:		pktstat
-Version:	1.7.4
+Version:	1.7.5
 Release:	1
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
-# Source0-md5:	53400f5228a6d4f2b93afe72b8caef53
+# Source0-md5:	8ce237a23f7598c06d7996d15b7cd2fb
 URL:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 BuildRequires:	libpcap-devel
 BuildRequires:	ncurses-devel

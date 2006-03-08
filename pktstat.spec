@@ -1,12 +1,12 @@
 Summary:	Real-time packet viewer
 Summary(pl):	Przegl±darka pakietów trybu rzeczywistego
 Name:		pktstat
-Version:	1.7.5
+Version:	1.8.1
 Release:	1
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
-# Source0-md5:	8ce237a23f7598c06d7996d15b7cd2fb
+# Source0-md5:	974783a6b645c14f54908067be5f3a76
 URL:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 BuildRequires:	libpcap-devel
 BuildRequires:	ncurses-devel
@@ -32,23 +32,29 @@ do tcpdumpa.
 %setup -q
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+
 %{__make} %{name} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags}" \
+	CFLAGS="%{rpmcflags} -I/usr/include/ncurses" \
 	CPPFLAGS=-I/usr/include/ncurses
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
 
-install pktstat $RPM_BUILD_ROOT%{_bindir}
-install pktstat.1 $RPM_BUILD_ROOT%{_mandir}/man1
+%{__make} install \
+        DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README
+%doc ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/pktstat
 %{_mandir}/man1/*

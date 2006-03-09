@@ -8,17 +8,20 @@ Group:		Applications/Networking
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
 # Source0-md5:	974783a6b645c14f54908067be5f3a76
 URL:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
+BuildRequires:	autoconf >= 2.50
+BuildRequires:	automake
 BuildRequires:	libpcap-devel
+BuildRequires:	libtool
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Display a real-time list of active connections seen on a network
-interface, and how much bandwidth is being used by what. Partially decodes
-HTTP and FTP protocols to show what filename is being transferred. X11
-application names are also shown. Entries hang around on the screen for
-a few seconds so you can see what just happened. Also accepts filter
-expressions a'la tcpdump.
+interface, and how much bandwidth is being used by what. Partially
+decodes HTTP and FTP protocols to show what filename is being
+transferred. X11 application names are also shown. Entries hang around
+on the screen for a few seconds so you can see what just happened.
+Also accepts filter expressions a'la tcpdump.
 
 %description -l pl
 Wy¶wietla na ¿ywo listê po³±czeñ widocznych na interfejsie sieciowym,
@@ -37,7 +40,8 @@ do tcpdumpa.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+%configure \
+	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
 
 %{__make} %{name} \
 	CC="%{__cc}" \

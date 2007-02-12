@@ -1,5 +1,5 @@
 Summary:	Real-time packet viewer
-Summary(pl):	Przegl±darka pakietów trybu rzeczywistego
+Summary(pl.UTF-8):   PrzeglÄ…darka pakietÃ³w trybu rzeczywistego
 Name:		pktstat
 Version:	1.8.1
 Release:	1
@@ -23,12 +23,12 @@ transferred. X11 application names are also shown. Entries hang around
 on the screen for a few seconds so you can see what just happened.
 Also accepts filter expressions a'la tcpdump.
 
-%description -l pl
-Wy¶wietla na ¿ywo listê po³±czeñ widocznych na interfejsie sieciowym,
-wraz z informacj± co zajmuje pasmo. W szczególno¶ci dekoduje protoko³y
-HTTP oraz FTP, pokazuj±c nazwê przesy³anego pliku. Nazwy aplikacji X11
-równie¿ s± pokazywane. Pozycje wy¶wietlane s± przez kilka sekund, aby
-mo¿na by³o zobaczyæ co siê dzieje. Przyjmuje filtry w sk³adni podobnej
+%description -l pl.UTF-8
+WyÅ›wietla na Å¼ywo listÄ™ poÅ‚Ä…czeÅ„ widocznych na interfejsie sieciowym,
+wraz z informacjÄ… co zajmuje pasmo. W szczegÃ³lnoÅ›ci dekoduje protokoÅ‚y
+HTTP oraz FTP, pokazujÄ…c nazwÄ™ przesyÅ‚anego pliku. Nazwy aplikacji X11
+rÃ³wnieÅ¼ sÄ… pokazywane. Pozycje wyÅ›wietlane sÄ… przez kilka sekund, aby
+moÅ¼na byÅ‚o zobaczyÄ‡ co siÄ™ dzieje. Przyjmuje filtry w skÅ‚adni podobnej
 do tcpdumpa.
 
 %prep

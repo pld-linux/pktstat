@@ -1,5 +1,5 @@
 Summary:	Real-time packet viewer
-Summary(pl.UTF-8):   Przeglądarka pakietów trybu rzeczywistego
+Summary(pl.UTF-8):	Przeglądarka pakietów trybu rzeczywistego
 Name:		pktstat
 Version:	1.8.1
 Release:	1

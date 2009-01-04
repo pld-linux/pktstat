@@ -1,12 +1,12 @@
 Summary:	Real-time packet viewer
 Summary(pl.UTF-8):	Przeglądarka pakietów trybu rzeczywistego
 Name:		pktstat
-Version:	1.8.1
+Version:	1.8.4
 Release:	1
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
-# Source0-md5:	974783a6b645c14f54908067be5f3a76
+# Source0-md5:	56680a1bb256d10ea491dd418eb7f292
 URL:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake

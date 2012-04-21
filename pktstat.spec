@@ -1,12 +1,12 @@
 Summary:	Real-time packet viewer
 Summary(pl.UTF-8):	Przeglądarka pakietów trybu rzeczywistego
 Name:		pktstat
-Version:	1.8.4
-Release:	3
+Version:	1.8.5
+Release:	1
 License:	BSD
 Group:		Applications/Networking
 Source0:	http://www.adaptive-enterprises.com.au/~d/software/pktstat/%{name}-%{version}.tar.gz
-# Source0-md5:	56680a1bb256d10ea491dd418eb7f292
+# Source0-md5:	0f387f86567eb3da1c329f7b182c3355
 URL:		http://www.adaptive-enterprises.com.au/~d/software/pktstat/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -24,12 +24,12 @@ on the screen for a few seconds so you can see what just happened.
 Also accepts filter expressions a'la tcpdump.
 
 %description -l pl.UTF-8
-Wyświetla na żywo listę połączeń widocznych na interfejsie sieciowym,
-wraz z informacją co zajmuje pasmo. W szczególności dekoduje protokoły
-HTTP oraz FTP, pokazując nazwę przesyłanego pliku. Nazwy aplikacji X11
-również są pokazywane. Pozycje wyświetlane są przez kilka sekund, aby
-można było zobaczyć co się dzieje. Przyjmuje filtry w składni podobnej
-do tcpdumpa.
+Ten program yświetla na żywo listę połączeń widocznych na interfejsie
+sieciowym, wraz z informacją, co zajmuje pasmo. W szczególności
+dekoduje protokoły HTTP oraz FTP, pokazując nazwę przesyłanego pliku.
+Nazwy aplikacji X11 również są pokazywane. Pozycje wyświetlane są
+przez kilka sekund, aby można było zobaczyć co się dzieje. Przyjmuje
+filtry w składni podobnej do tcpdumpa.
 
 %prep
 %setup -q
@@ -61,4 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/pktstat
-%{_mandir}/man1/*
+%{_mandir}/man1/pktstat.1*
